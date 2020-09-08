@@ -1,3 +1,5 @@
+
+
 var tch=function(){
     var uril = 'https://egov-micro-dev.egovernments.org/egov-mdms-service/v1/_search';
 
@@ -28,19 +30,19 @@ var tch=function(){
         }
     }
 
-    // send POST request
-    fetch(uril, options)
+     //send POST request
+/*    fetch(uril, options)
         .then(res => res.json())
         .then(res => console.log(res));
-
-/*
+*/
     fetch(uril, options)
             .then(function(response){
                 return response.json();
             } )
             .then(function(responseBody) {
-                console.log(responseBody)
+                //console.log(responseBody)
+                print(responseBody);
             });
 
-        */
+
 }
