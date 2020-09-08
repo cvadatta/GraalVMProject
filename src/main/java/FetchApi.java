@@ -11,11 +11,14 @@ public class FetchApi {
 
         Context c= Context.create();
         File file=new File("src\\main\\resources\\fetch.js");
-        c.eval(Source.newBuilder("js",file).build());
-        //Value result=c.getBindings("js").getMember("tch");
-        Value resf=c.getBindings("js").putMember ("fetch", new Fetch ());
-        Value answer=resf.execute();
+        //c.eval(Source.newBuilder("js",file).build());
+        c.getBindings("js").putMember ("fetch", new Fetch ());
+        Value answer = c.eval(Source.newBuilder("js",file).build());
         System.out.println(answer);
+        //Value result=c.getBindings("js").getMember("tch");
+        //Value resf=c.getBindings("js").putMember ("fetch", new Fetch ());
+        //resf.execute();
+        //System.out.println(answer);
 
     }
 }

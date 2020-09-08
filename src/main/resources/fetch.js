@@ -30,11 +30,13 @@ var tch=function(){
         }
     }
 
+    fetch.post(uril,user)
+
      //send POST request
 /*    fetch(uril, options)
         .then(res => res.json())
         .then(res => console.log(res));
-*/
+
     fetch(uril, options)
             .then(function(response){
                 return response.json();
@@ -43,6 +45,8 @@ var tch=function(){
                 //console.log(responseBody)
                 print(responseBody);
             });
+
+            */
 
 
 }
