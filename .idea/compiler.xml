@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="GraalVMProject" options="--add-modules=jdk.incubator.httpclient" />
+      <module name="GraalVMProject" options="" />
     </option>
   </component>
 </project>

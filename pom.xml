@@ -15,7 +15,6 @@
                 <configuration>
                     <source>11</source>
                     <target>11</target>
-                    <compilerArgument>--add-modules=jdk.incubator.httpclient</compilerArgument>
                 </configuration>
             </plugin>
         </plugins>
