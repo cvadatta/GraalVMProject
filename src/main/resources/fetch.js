@@ -1,9 +1,5 @@
-
-const fetch = require('node-fetch');
-
+/*
 var tch=function(){
-
-
 
     var uril = 'https://egov-micro-dev.egovernments.org/egov-mdms-service/v1/_search';
 
@@ -12,6 +8,7 @@ var tch=function(){
       "client_id": "1001125",
       "client_secret": "876JHG76UKFJYGVHf867rFUTFGHCJ8JHV"
     }
+
 
     var data = {
           "RequestInfo": {},
@@ -31,7 +28,7 @@ var tch=function(){
           }
     };
 
-    fetch(url, { method: 'POST', headers: headers, body: data})
+    fetch(uril, { method: 'POST', headers: headers, body: data})
       .then((res) => {
          return res.json()
     })
@@ -70,11 +67,10 @@ var tch=function(){
     }
 
     */
-
-  //  fetch.post(uril,user)
+    /*
 
      //send POST request
-/*    fetch(uril, options)
+      fetch(uril, options)
         .then(res => res.json())
         .then(res => console.log(res));
 
@@ -87,8 +83,48 @@ var tch=function(){
                 //console.log(responseBody)
                 print(responseBody);
             });
-            */
+    */
 
 
 
-}
+//}
+
+
+var tch=function(){
+    var uril = 'https://egov-micro-dev.egovernments.org/egov-mdms-service/v1/_search';
+
+    // post body data
+    var user = {
+      "RequestInfo": {},
+      "MdmsCriteria": {
+        "tenantId": "pb",
+        "moduleDetails": [
+          {
+            "moduleName": "tenant",
+            "masterDetails": [
+              {
+                "name": "tenants",
+                "filter": "$.*.code"
+              }
+            ]
+          }
+        ]
+      }
+    };
+    // request options
+    var options = {
+        method: 'POST',
+        //mode: 'no-cors',
+        body: JSON.stringify(user),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+
+    // send POST request
+    fetch(uril, options)
+    .then(res => res.json())
+    .then(res => console.log(res));
+
+};
+
